@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Layout</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS for header and alternating rows */
+        body{
+            margin: 1rem;
+            padding: 2px;
+        }
+        .header-color {
+            background-color: #1c4980 !important;
+            color: lightblue;
+        }
+        .search-input {
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            /* padding: 8px;
+            margin-bottom:5px; */
+            font-size: 16px;
+        }
+        .search-button {
+            background-color: #1c4980;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 15px;
+            margin-left: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Search bar row -->
+        <div class="row search-form">
+            <div class="col">
+                <form class="form-inline">
+                    <input id="s_box_" class="form-control mr-sm-2 search-input" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="handleSearch();return false;">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <table class="table mt-3 table-striped">
+        <thead class="header-color">
+          <tr>
+            <th scope="col">Rank</th>
+            <th scope="col">Team</th>
+            <th scope="col">Members</th>
+            <th scope="col">Time Taken</th>
+          </tr>
+        </thead>
+        <tbody id="tb">
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="row mt-3">
+        <div class="col text-center">
+            <ul class="pagination">
+                <li class="page-item  prev disabled"><a class="page-link" href="#"  onclick="addPrev()">Previous</a></li>
+                <li class="page-item"><a  id="current" class="page-link" href="#" >1</a></li>
+                <!-- Add more page links here -->
+                <li class="page-item next"><a class="page-link" href="#" onclick="addNext()">Next</a></li>
+            </ul>
+        </div>
+    </div>
+
+      
+<!-- Bootstrap JS and jQuery (for handling button clicks) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="./index.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
