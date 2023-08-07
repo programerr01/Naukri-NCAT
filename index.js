@@ -1,4 +1,4 @@
-var file_url ="http://127.0.0.1:5000/"
+var file_url ="https://raw.githubusercontent.com/programerr01/flipkart-grid5.0/master/result.json"
 var GLOBAL_RES = []
 var GLOBAL_DT = []
 var page_no = 1;
