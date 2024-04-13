@@ -26,7 +26,7 @@ function handleSearch(){
     if(search_box){
         var loc_dt = []
         for(var each of GLOBAL_RES){
-                if(JSON.stringify(each).indexOf(search_item) != -1){
+                if(JSON.stringify(each).toLowerCase().indexOf(search_item.toLowerCase()) != -1){
                     loc_dt.push(each);
                 } 
         }
