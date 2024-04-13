@@ -1,4 +1,4 @@
-var file_url ="https://raw.githubusercontent.com/programerr01/flipkart-grid5.0/master/result.json"
+var file_url ="https://raw.githubusercontent.com/programerr01/Naukri-NCAT/master/result.json"
 var GLOBAL_RES = []
 var GLOBAL_DT = []
 var page_no = 1;
@@ -101,12 +101,12 @@ async function fill_table(copy_dt=null){
     }
     for(var each of copy_dt){
         console.log(each);
+
         var t_ =`
         <tr>
             <th scope="row">${each['rank']}</th>
-            <td>${each['team']['team_name']}</td>
-            <td>${each['team']['players'].map((each)=>each.name).join(",")}</td>
-            <td>${formatTime(each['time'])}</td>
+            <td>${each['name']}</td>
+            <td>${each['instituteLabel']}</td>
         </tr>
         `
         tt_+=t_;
